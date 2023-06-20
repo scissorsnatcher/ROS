@@ -11,7 +11,7 @@ class TurtleFollowerNode:
         self.follower_speed = rospy.get_param('~follower_speed', 1.0)
 
         rospy.Subscriber('/turtle1/pose', Pose, self.turtle1_pose_callback)
-        rospy.Subscriber('/turtle2/Pose', Pose, self.turtle2_pose_callback)
+        rospy.Subscriber('/turtle2/pose', Pose, self.turtle2_pose_callback)
 
         self.cmd_vel_pub = rospy.Publisher('/turtle2/cmd_vel', Twist, queue_size=10)
         
